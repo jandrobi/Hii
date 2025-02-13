@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بە دلی خۆت</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>بە دلی خۆت ❤️</h1>
+        <p>ژیان لە تۆیە و خۆشی لەوەیە کە بە دلی خۆت بژیی...</p>
+        <button onclick="changeQuote()">پێشنیارێکی تر</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "ژیان کۆتایی نییە، تەنها ئەستەمێکە.",
+            "دووبارە تێک چوون جێی گەشەکردنە.",
+            "هەرچەندە دوور بن، دڵی نێوانمان نزیکە.",
+            "ئەزموون نیشانەیەکە بۆ بەرزبوونەوە."
+        ];
+        function changeQuote() {
+            let p = document.querySelector("p");
+            let randomIndex = Math.floor(Math.random() * quotes.length);
+            p.textContent = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
